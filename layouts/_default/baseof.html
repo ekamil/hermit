@@ -28,6 +28,9 @@
 </head>
 
 <body id="page">
+	{{- with .Site.Params.bgImg }}
+	<div class="bg-img" style="background-image: url('{{ . }}')"></div>
+	{{- end }}
 	{{ block "header" . -}}{{ end -}}
 	{{ block "main" . -}}{{ end -}}
 	{{ block "footer" . -}}{{ end }}
